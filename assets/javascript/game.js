@@ -60,7 +60,7 @@ $("#animalbuttons").on("click", ".animal", function () {
 
 
 
-$('img-thumbnail').on("click", function () {
+$('.img-thumbnail').on("click", function () {
     alert("test");
     animalImage.attr("src", results[i].images.fixed_height_still.url);
 
