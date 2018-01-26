@@ -1,0 +1,11 @@
+.img-thumbnail{
+    
+    min-width: 100%;
+    min-height: 100%;
+}
+#animalbuttons{
+    float: left;
+}
+h1{
+    text-align: center;
+}
