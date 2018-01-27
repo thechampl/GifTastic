@@ -1,7 +1,6 @@
 .img-thumbnail{
     
-    min-width: 100%;
-    min-height: 100%;
+    height: 200px;
 }
 #animalbuttons{
     float: left;
