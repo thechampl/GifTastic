@@ -33,7 +33,7 @@ $("#animalbuttons").on("click", ".animal", function () {
 
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        animal + "&api_key=dc6zaTOxFJmzC&limit=10&rating=g";
+        animal + "&api_key=dc6zaTOxFJmzC&limit=8&rating=g";
 
     console.log(queryURL)
 
