@@ -49,7 +49,11 @@ $("#animalbuttons").on("click", ".animal", function () {
             for (var i = 0; i < results.length; i++) {
                 var gifDiv = $("<div class='col-md-3'>");
                 var animalImage = $("<img class='img-thumbnail'>");
-                animalImage.attr("src", results[i].images.fixed_height.url);
+                animalImage.attr("data-state", "animate");
+               animalImage.attr("src", results[i].images.fixed_height.url);
+               animalImage.attr("data-animate",results[i].images.fixed_height.url);
+               animalImage.attr("data-still", results[i].images.fixed_height_still.url);
+                
                 gifDiv.append(animalImage);
                 $("#divplace").prepend(gifDiv);
             }
@@ -60,9 +64,19 @@ $("#animalbuttons").on("click", ".animal", function () {
 
 
 
-$('.img-thumbnail').on("click", function () {
-    alert("test");
-    animalImage.attr("src", results[i].images.fixed_height_still.url);
+$('#divplace').on("click", '.img-thumbnail', function () {
+    console.log($(this))
+    var state = $(this).attr("data-state")
 
+    if(state === "animate"){
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+    }
+    else {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+
+        
+    }
 });
 buttonrender()
